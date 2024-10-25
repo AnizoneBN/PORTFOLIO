@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Boxicons -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    
+    <link rel="stylesheet" href="/Project_FILES/CSS/form.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="message-box">
+            <p style="font-size: 20px; margin-bottom: 10px;">Hey there! </p>
+            <p>Welcome to my world of code! If you’ve got any questions, need help with a project, or just want to talk tech, feel free to reach out.</p>
+            <br>
+            <p>Looking forward to hearing <span style="color: purple; margin-bottom: 15px; font-weight: bold;">from you!</span></p>
+        </div>
+        
+        <form action="#" class="contact-form" id="myForm">
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" id="name" placeholder="Full Name" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="email" placeholder="Email Address" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-phone"></i>
+                <input type="tel" placeholder="Phone Number (optional)">
+            </div>
+            <div class="input-group">
+                <i class="bx bx-edit"></i>
+                <input type="text" placeholder="Purpose of Visit" required>
+            </div>
+            <div class="input-group">
+                <i class="bx bx-calendar"></i>
+                <input type="date" placeholder="Preferred Date" required>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+
+    <!-- Anime.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="script.js"></script>
+    <script src='/contact/form.js'></script>
+    <script src="/Project_FILES/JS/Anime_form.js"></script>
+</body>
+</html>

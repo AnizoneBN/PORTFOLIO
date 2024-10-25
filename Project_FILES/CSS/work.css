@@ -1,0 +1,158 @@
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff; /* Solid background for large devices */
+    transition: background-color 0.3s ease;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+
+.settings {
+    font-size: 20px;
+}
+
+.settings a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.settings a:hover {
+    color: #007BFF;
+}
+
+/* Responsive design for small devices */
+@media (max-width: 768px) {
+    header {
+       /* background-color: rgba(255, 255, 255, 0.3); /* Transparent header for small devices */
+    }
+
+    body {
+        background-color: rgba(244, 244, 244, 0.5); /* Transparent body background for small devices */
+    }
+
+    .logo {
+        font-size: 20px; /* Smaller font size on smaller screens */
+    }
+
+    .settings a {
+        font-size: 18px; /* Adjusted settings icon size */
+    }
+}
+.welcome-text {
+    font-size: 18px;
+    font-weight: 400;
+    color: #333;
+    margin-top: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Space between text and icon */
+}
+
+.welcome-text i {
+    font-size: 20px;
+    color: #007BFF; /* Color for the icon */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .welcome-text {
+        font-size: 16px;
+        margin-top: 10px;
+        color: rgba(51, 51, 51, 0.8); /* Slightly transparent text for small devices */
+    }
+
+    .welcome-text i {
+        font-size: 18px;
+    }
+}
+
+        /* Custom alert styling */
+        .custom-alert {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .alert-content {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 20px;
+            text-align: center;
+            position: relative;
+            width: 90%;
+            max-width: 320px;
+           /* box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* iPhone-style shadow */
+            transition: all 0.3s ease;
+        }
+
+        .big-icon {
+            font-size: 70px;
+            color: #007BFF;
+            margin-bottom: 15px;
+        }
+
+        .alert-content p {
+            font-size: 16px;
+            color: #333;
+            margin-top: 8px;
+        }
+
+      /*  .close-btn {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            font-size: 20px;
+            cursor: pointer;
+            color: #333;
+        } */
+
+        .close-btn:hover {
+            color: #007BFF;
+        }
+
+        /* Responsive for smaller screens */
+        @media (max-width: 768px) {
+            .big-icon {
+                font-size: 60px;
+            }
+
+            .alert-content p {
+                font-size: 14px;
+            }
+        }
+  #hr {
+    border: none; 
+    height: 0.1px; 
+    background-color: rgba(211, 211, 211, 9.1); 
+    width: 118.5%;
+    margin: 0; 
+    padding: 0;
+    margin-left: -25px;
+    margin-top: 20px;
+  }

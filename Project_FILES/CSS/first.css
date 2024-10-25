@@ -1,0 +1,310 @@
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      
+    }
+        .container {
+            text-align: center;
+            padding: 40px;
+            background-color: white;
+            border-radius: 15px;
+            max-width: 600px;
+            width: 100%;
+            position: absolute;
+            transition: transform 0.3s;
+        }
+
+        .container:hover {
+            transform: translateY(-10px);
+        }
+
+        .icon {
+            font-size: 80px;
+            color: #18f;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 600;
+            margin: 20px 0;
+            color: #333;
+            transition: color 0.3s;
+        }
+
+        h1:hover {
+            color: #18f;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .btn {
+            background-color: #18f;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            transition: background-color 0.3s, transform 0.3s;
+            position: relative;
+        }
+
+        .btn:hover {
+            background-color: #0d6efd;
+            transform: translateY(-5px);
+        }
+
+        .social-icons {
+            margin-top: 30px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            font-size: 24px;
+            color: #18f;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+            color: #0d6efd;
+        }
+
+        /* Transition Overlay 
+        .transition-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+          /*  width: 100%;
+           /* height: 100%;
+            background-color: white;
+          /*  transform: translateX(-100%);
+            transition: transform 0.5s ease;
+            z-index: 9999;
+            margin-top: 80px;
+        }*/
+        /* Transition Overlay */
+.transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.transition-overlay.active {
+    transform: translateX(0);
+}
+
+/* Loading container centered for all devices */
+.loading-container {
+    text-align: center;
+    max-width: 90%;
+    width: 400px; /* Fixed width for the content */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+   /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);*/
+}
+
+        .transition-overlay.active {
+            transform: translateX(0);
+        }
+                .loading-container {
+            text-align: center;
+        }
+
+        .loading-text {
+            font-size: 24px;
+            color: #18f; /* Text color */
+            margin-bottom: 20px;
+            transition: color 0.3s;
+        }
+
+        .loading-text:hover {
+            color: #0d6efd; /* Hover color */
+        }
+
+        canvas {
+            border: 3px solid rgba(24, 144, 255, 0.5);
+            border-radius: 0px;
+            transition: transform 0.3s;
+        }
+
+        canvas:hover {
+            transform: scale(1.05); /* Scale on hover */
+        }
+
+        .spinner {
+            margin-top: 20px;
+            font-size: 40px;
+            color: #18f;
+            animation: spin 1s infinite linear;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        
+        /* Base styles */
+
+
+/* For smaller devices (phones) */
+@media (max-width: 600px) {
+    .loading-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .loading-text {
+        font-size: 18px; /* Smaller font size for mobile */
+    }
+
+    canvas {
+        width: 100%; /* Make the canvas responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .spinner {
+        font-size: 30px; /* Smaller spinner size for mobile */
+    }
+}
+
+/* For medium devices (tablets) */
+@media (min-width: 601px) and (max-width: 900px) {
+    .loading-container {
+        width: 80%;
+        padding: 15px;
+    }
+
+    .loading-text {
+        font-size: 20px; /* Adjust font size for tablets */
+    }
+
+    canvas {
+        width: 100%; /* Make the canvas responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .spinner {
+        font-size: 35px; /* Medium spinner size */
+    }
+}
+
+/* For larger devices (desktops) */
+@media (min-width: 901px) {
+    .loading-container {
+        width: 60%; /* Adjust the width for larger screens */
+    }
+
+    .loading-text {
+        font-size: 24px; /* Default font size for larger screens */
+    }
+
+    canvas {
+        width: 100%; /* Make the canvas responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .spinner {
+        font-size: 40px; /* Default spinner size */
+    }
+}
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+    .loading-container {
+        width: 90%;  /* Adjust to occupy most of the screen */
+        padding: 15px; /* Reduced padding for smaller screens */
+    }
+
+    .loading-text {
+        font-size: 16px; /* Smaller text for better readability on small screens */
+    }
+
+    .spinner {
+        font-size: 24px; /* Smaller spinner for mobile screens */
+    }
+}
+
+/* Medium devices (tablets, 601px to 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+    .loading-container {
+        width: 70%;  /* Occupies 70% of the screen */
+        padding: 20px; /* Default padding for medium devices */
+    }
+
+    .loading-text {
+        font-size: 18px; /* Medium text size */
+    }
+
+    .spinner {
+        font-size: 30px; /* Adjust spinner size for medium screens */
+    }
+}
+
+/* Large devices (desktops, above 900px) */
+@media (min-width: 901px) {
+    .loading-container {
+        width: 50%;  /* Occupies 50% of the screen */
+        padding: 25px; /* Increased padding for larger screens */
+    }
+
+    .loading-text {
+        font-size: 20px; /* Larger text for desktops */
+    }
+
+    .spinner {
+        font-size: 35px; /* Default spinner size */
+    }
+}
